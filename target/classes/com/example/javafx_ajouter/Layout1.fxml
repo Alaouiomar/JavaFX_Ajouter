@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="com.example.javafx_ajouter.HelloController">
+   <top>
+      <HBox spacing="10">
+          <padding>
+              <Insets left="10" top="10" right="10" bottom="10"></Insets>
+          </padding>
+          <children>
+              <Label text="Nom de la matière : "></Label>
+              <TextField fx:id="textFieldName"></TextField>
+              <Button text="Ajouter" onAction="#addSubject"></Button>
+          </children>
+      </HBox>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets left="10" top="10" right="10" bottom="10"></Insets>
+            </padding>
+            <ListView fx:id="ListView1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Anglais"></String>
+                        <String fx:value="Francais"></String>
+                        <String fx:value="POO"></String>
+                        <String fx:value="Java Avancée"></String>
+                    </FXCollections>
+                </items>
+            </ListView>
+        </VBox>
+    </center>
+</BorderPane>
